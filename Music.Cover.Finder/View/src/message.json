@@ -1,0 +1,26 @@
+﻿{
+ "en-US":{
+        "Resource":{
+            "About1":"Cover Finder Application",
+            "About2":"Made with Neutronum",
+            "Cancel":"Cancel",
+            "Completed":"Completed",
+            "ConfirmationNeeded":"Confirmation needed",
+            "DiscogsExplanation":"Go to https://www.discogs.com/settings/developers. Create an account and generate a token using 'Generate new token' button.",
+            "DoYouWantToCloseApplication":"Do you want to close application?",
+            "DoYouWantToRestartApplication":"Do you want to restart application?",
+            "HowToDiscogsToken":"How to get a Discogs Token",
+            "MadeBy":"made by",
+            "Menu_about":"About",
+            "Menu_authentication":"Authentication",
+            "Menu_search":"Search",
+            "NeedToken":"Please provide a valid Token",
+            "Ok":"Ok",
+            "OperationNotAvailable":"Operation not available",
+            "ProjectDescription":"Cover Finder Application",
+            "Restart":"Restart",
+            "SearchMusicCover":"Go To Music Cover Search",
+            "VisitDiscogs":"Visit Discogs"
+        }
+    }
+}
