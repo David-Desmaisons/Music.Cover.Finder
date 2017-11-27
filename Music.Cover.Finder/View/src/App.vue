@@ -61,9 +61,7 @@ export default {
     }
   },
   mounted(){
-      console.log(this.$route)
-      console.log(window.location)
-      !!(this.$route.name) || this.$router.replace(firstRoute);
+      (window.location.hash=='#/') && (!!(this.$route.name) || this.$router.replace(firstRoute))
   },
   methods:{
     onNotified(notification) {

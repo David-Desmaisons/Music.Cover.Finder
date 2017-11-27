@@ -12,9 +12,7 @@ function route ({name, children, component}) {
     }
 }
 
-const allRoutes = routeDefinitions.map(route)
-const routes = [...allRoutes]
-//, { path: '/', redirect: '/search' }]
+const routes = routeDefinitions.map(route)
 
 const router = new Router({
     mode: 'hash',
