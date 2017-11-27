@@ -60,7 +60,7 @@ router.beforeEach((to, from, next) => {
         } else if (ok.Redirect) {
             next({name: ok.Redirect});
         } else {
-            router.app.ViewModel.CurrentViewModel = ok.To;
+            //router.app.ViewModel.CurrentViewModel = ok.To;
             next();
         }
     }, (error) =>{

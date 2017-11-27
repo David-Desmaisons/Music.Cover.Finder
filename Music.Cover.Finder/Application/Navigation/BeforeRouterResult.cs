@@ -2,37 +2,34 @@
 {
     public struct BeforeRouterResult
     {
-        private BeforeRouterResult(string redirect, object viewModel)
+        private BeforeRouterResult(string redirect)
         {
             Redirect = redirect;
             Continue = true;
-            To = viewModel;
         }
 
-        private BeforeRouterResult(bool continueRoute, object viewModel)
+        private BeforeRouterResult(bool continueRoute)
         {
-            Redirect = null;
             Continue = continueRoute;
-            To = viewModel;
+            Redirect = null;          
         }
 
         public static BeforeRouterResult Cancel()
         {
-            return new BeforeRouterResult(false, null);
+            return new BeforeRouterResult(false);
         }
 
-        public static BeforeRouterResult Ok(object viewModel)
+        public static BeforeRouterResult Ok()
         {
-            return new BeforeRouterResult(null, viewModel);
+            return new BeforeRouterResult(true);
         }
 
         public static BeforeRouterResult CreateRedirect(string routeName)
         {
-            return new BeforeRouterResult(routeName, null);
+            return new BeforeRouterResult(routeName);
         }
 
         public string Redirect { get; }
         public bool Continue { get; }
-        public object To { get; }
     }
 }

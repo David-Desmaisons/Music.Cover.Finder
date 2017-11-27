@@ -12,7 +12,12 @@ namespace Music.Cover.Finder.ViewModel
         public IWindowViewModel Window { get; }
         public NavigationViewModel Router { get; }
 
-        public object CurrentViewModel { get; set; }
+        private object _CurrentViewModel;
+        public object CurrentViewModel 
+        {
+            get { return _CurrentViewModel; }
+            private set { Set(ref _CurrentViewModel, value); }
+        }
 
         private MessageModalViewModel _Modal;
         public MessageModalViewModel Modal
@@ -32,7 +37,12 @@ namespace Music.Cover.Finder.ViewModel
         {
             Window = window;
             Router = router;
-            //Router.OnNavigated += Router_OnNavigated;
+            Router.OnNavigated += Router_OnNavigated;
+        }
+
+        private void Router_OnNavigated(object sender, RoutedEventArgs e) 
+        {
+            CurrentViewModel = e.NewRoute.ViewModel;
         }
 
         public Task<bool> ShowMessage(ConfirmationMessage confirmationMessage)

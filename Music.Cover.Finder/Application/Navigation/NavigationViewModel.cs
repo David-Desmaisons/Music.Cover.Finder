@@ -63,7 +63,7 @@ namespace Music.Cover.Finder.Application.Navigation
             if (string.IsNullOrEmpty(redirect))
             {
                 _ViewModel = to.ViewModel;
-                return BeforeRouterResult.Ok(_ViewModel);
+                return BeforeRouterResult.Ok();
             }
 
             to.Redirect(redirect, GetViewModelFromRoute(redirect));

@@ -4,6 +4,7 @@
       @input="drawerChanged"
       :absolute="false"
       :clipped="true"
+      :width="200"
       app
     >
 

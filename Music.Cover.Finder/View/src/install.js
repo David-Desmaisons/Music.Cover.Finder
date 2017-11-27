@@ -23,6 +23,7 @@ import {
     VToolbar,
     VCard,
     VDialog,
+    VSubheader,
     VTextField,
     transitions
   } from 'vuetify'
@@ -44,6 +45,7 @@ function install(Vue) {
           VCard,
           VDialog,
           VTextField,
+          VSubheader,
           transitions
         }
     })

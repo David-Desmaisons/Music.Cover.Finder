@@ -17,23 +17,30 @@
 
         <v-content>
 
-            <v-container grid-list-xl>
+            <v-container grid-list-xl xs10 offset-xs1>
                 <v-layout row wrap>
-                    <v-flex xs10 offset-xs1>
-                        <p>Please enter your discogs Token:</p>
-
-                        <v-text-field label="Token" v-model="viewModel.Token" required>
-                        </v-text-field>
-
-                        <v-btn color="warning" @click.stop="showModal=true">{{$t('Resource.HowToDiscogsToken')}}
-                        </v-btn>
-
-                        <text-button :text="$t('Resource.SearchMusicCover')" :command="viewModel.GoToSearch">
-                        </text-button>
-
+                    <v-flex xs2>
+                        <v-subheader>Discogs Token</v-subheader>
                     </v-flex>
 
+                    <v-flex xs8>
+                        <v-text-field label="Token" 
+                            v-model="viewModel.Token"
+                            :append-icon="hideToken ? 'visibility' : 'visibility_off'"
+                            :append-icon-cb="() => (hideToken = !hideToken)"
+                            :type="hideToken ? 'password' : 'text'"
+                            required>
+                        </v-text-field>
+                    </v-flex>
                 </v-layout>
+
+                 <v-layout row wrap>
+                    <v-btn color="warning" @click.stop="showModal=true">{{$t('Resource.HowToDiscogsToken')}}
+                    </v-btn>
+
+                    <text-button :text="$t('Resource.SearchMusicCover')" :command="viewModel.GoToSearch">
+                    </text-button>
+                 </v-layout>
             </v-container>
         </v-content>
     </main>
@@ -50,7 +57,8 @@ const props={
 export default {
     data(){
         return {
-            showModal:false
+            showModal:false,
+            hideToken:true
         };
     },
     methods:{
