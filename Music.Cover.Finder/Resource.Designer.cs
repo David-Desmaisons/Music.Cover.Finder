@@ -79,6 +79,15 @@ namespace Music.Cover.Finder {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to button..
+        /// </summary>
+        internal static string Button {
+            get {
+                return ResourceManager.GetString("Button", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         internal static string Cancel {
@@ -138,6 +147,24 @@ namespace Music.Cover.Finder {
         internal static string FirstTimeTokenMessage {
             get {
                 return ResourceManager.GetString("FirstTimeTokenMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to to generate a token using.
+        /// </summary>
+        internal static string GenerateTokenUsing {
+            get {
+                return ResourceManager.GetString("GenerateTokenUsing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Go to .
+        /// </summary>
+        internal static string GoTo {
+            get {
+                return ResourceManager.GetString("GoTo", resourceCulture);
             }
         }
         
@@ -237,6 +264,24 @@ namespace Music.Cover.Finder {
         internal static string SearchMusicCover {
             get {
                 return ResourceManager.GetString("SearchMusicCover", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Then go to .
+        /// </summary>
+        internal static string ThenGoTo {
+            get {
+                return ResourceManager.GetString("ThenGoTo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to to create a user..
+        /// </summary>
+        internal static string ToCreateUse {
+            get {
+                return ResourceManager.GetString("ToCreateUse", resourceCulture);
             }
         }
         

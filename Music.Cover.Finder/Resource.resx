@@ -123,6 +123,9 @@
   <data name="About2" xml:space="preserve">
     <value>Made with Neutronum</value>
   </data>
+  <data name="Button" xml:space="preserve">
+    <value>button.</value>
+  </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
@@ -143,6 +146,12 @@
   </data>
   <data name="FirstTimeTokenMessage" xml:space="preserve">
     <value>Please provide a Discogs Token to start using Music Cover Finder</value>
+  </data>
+  <data name="GenerateTokenUsing" xml:space="preserve">
+    <value>to generate a token using</value>
+  </data>
+  <data name="GoTo" xml:space="preserve">
+    <value>Go to </value>
   </data>
   <data name="HowToDiscogsToken" xml:space="preserve">
     <value>How to get a Discogs Token</value>
@@ -176,6 +185,12 @@
   </data>
   <data name="SearchMusicCover" xml:space="preserve">
     <value>Go To Music Cover Search</value>
+  </data>
+  <data name="ThenGoTo" xml:space="preserve">
+    <value>Then go to </value>
+  </data>
+  <data name="ToCreateUse" xml:space="preserve">
+    <value>to create a user.</value>
   </data>
   <data name="VisitDiscogs" xml:space="preserve">
     <value>Visit Discogs</value>
