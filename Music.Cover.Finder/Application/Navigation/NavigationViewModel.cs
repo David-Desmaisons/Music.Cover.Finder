@@ -44,7 +44,7 @@ namespace Music.Cover.Finder.Application.Navigation
         private BeforeRouterResult BeforeResolve(string routeName)
         {
             var context = GetRouteContext(routeName);
-            return (context == null) ? new BeforeRouterResult(false) : Navigate(context);
+            return (context == null) ? BeforeRouterResult.Cancel() : Navigate(context);
         }
 
         private BeforeRouterResult Navigate(RouteContext to)
@@ -56,18 +56,18 @@ namespace Music.Cover.Finder.Application.Navigation
             {
                 _CurrentNavigations.Dequeue();
                 to.Complete();
-                return new BeforeRouterResult(false);
+                return BeforeRouterResult.Cancel();
             }
 
             var redirect = routingEventArgs.RedirectedTo;
             if (string.IsNullOrEmpty(redirect))
             {
                 _ViewModel = to.ViewModel;
-                return new BeforeRouterResult(null);
+                return BeforeRouterResult.Ok(_ViewModel);
             }
 
             to.Redirect(redirect, GetViewModelFromRoute(redirect));
-            return new BeforeRouterResult(redirect);
+            return BeforeRouterResult.CreateRedirect(redirect);
         }
 
         private RouteContext GetRouteContext(string routeName)

@@ -160,7 +160,7 @@
     <value>Search</value>
   </data>
   <data name="NeedToken" xml:space="preserve">
-    <value>Please provide a valid Token</value>
+    <value>Please provide a valid Discogs Token</value>
   </data>
   <data name="Ok" xml:space="preserve">
     <value>Ok</value>
@@ -177,10 +177,10 @@
   <data name="SearchMusicCover" xml:space="preserve">
     <value>Go To Music Cover Search</value>
   </data>
-  <data name="TokenNeeded" xml:space="preserve">
-    <value>Discogs Token Needed</value>
-  </data>
   <data name="VisitDiscogs" xml:space="preserve">
     <value>Visit Discogs</value>
+  </data>
+  <data name="WelcomeMessage" xml:space="preserve">
+    <value>Welcome To Music Cover Finder</value>
   </data>
 </root>

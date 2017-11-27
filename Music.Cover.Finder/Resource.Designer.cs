@@ -187,7 +187,7 @@ namespace Music.Cover.Finder {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please provide a valid Token.
+        ///   Looks up a localized string similar to Please provide a valid Discogs Token.
         /// </summary>
         internal static string NeedToken {
             get {
@@ -241,20 +241,20 @@ namespace Music.Cover.Finder {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Discogs Token Needed.
-        /// </summary>
-        internal static string TokenNeeded {
-            get {
-                return ResourceManager.GetString("TokenNeeded", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Visit Discogs.
         /// </summary>
         internal static string VisitDiscogs {
             get {
                 return ResourceManager.GetString("VisitDiscogs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome To Music Cover Finder.
+        /// </summary>
+        internal static string WelcomeMessage {
+            get {
+                return ResourceManager.GetString("WelcomeMessage", resourceCulture);
             }
         }
     }

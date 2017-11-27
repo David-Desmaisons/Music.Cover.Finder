@@ -38,7 +38,7 @@ namespace Music.Cover.Finder
 
         private static MessageInformation BuildEmptyTokenMessage(bool first)
         {
-            return first? new MessageInformation(Resource.TokenNeeded, Resource.FirstTimeTokenMessage) : new MessageInformation(Resource.OperationNotAvailable, Resource.NeedToken);
+            return first? new MessageInformation(Resource.WelcomeMessage, Resource.FirstTimeTokenMessage) : new MessageInformation(Resource.OperationNotAvailable, Resource.NeedToken);
         }
 
         public void OnNavigated(RoutedEventArgs routedEvent)
