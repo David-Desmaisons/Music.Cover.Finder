@@ -5,15 +5,13 @@
             <v-card>
                 <v-card-title primary-title>
                 <div>
-                    <h3 class="headline mb-0 blue--text">{{viewModel.Information.Name}}</h3>
-                    <h3 class="headline mb-1 red--text">v {{viewModel.Information.Version}}</h3>
-                    <div v-html="completeDescription"></div>
+                    <h3 class="headline mb-0 yellow--text">{{viewModel.Information.Name}} - v.{{viewModel.Information.Version}}</h3>
+                    <div  class="blue--text" v-html="completeDescription"></div>
                 </div>
                 </v-card-title>
                 <v-card-actions>
-                    <!-- <v-btn flat color="orange" href="https://vuejs.org" target="_blank">Vue.js</v-btn>
-                    <v-btn flat color="orange" href="https://vuetifyjs.com/" target="_blank">Vuetify</v-btn>
-                    <v-btn flat color="orange" href="https://github.com/NeutroniumCore/Neutronium/" target="_blank">Neutronium</v-btn>-->
+                    <v-btn flat color="orange" @click.native.prevent="execute(viewModel.GoToProduct)">GitHub</v-btn>
+                    <v-btn flat color="orange" @click.native.prevent="execute(viewModel.GoToNeutronium)">Neutronium</v-btn>
                 </v-card-actions>
             </v-card>
             </v-flex>
@@ -27,12 +25,17 @@ const props={
 }
 
 export default {
-  props,
-  computed:{
-      completeDescription(){
-          return this.viewModel.Descriptions.join('<br>')
-      }
-  }
+    props,
+    methods:{
+        execute(command){
+            !!command && command.Execute()
+        }
+    },
+    computed:{
+        completeDescription(){
+            return this.viewModel.Descriptions.join('<br>')
+        }
+    }
 }
 </script>
 

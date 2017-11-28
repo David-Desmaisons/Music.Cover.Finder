@@ -117,11 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About1" xml:space="preserve">
-    <value>Cover Finder Application</value>
-  </data>
-  <data name="About2" xml:space="preserve">
-    <value>Made with Neutronum</value>
+  <data name="About" xml:space="preserve">
+    <value>Cover Finder Application, Made with Neutronum</value>
   </data>
   <data name="Button" xml:space="preserve">
     <value>button.</value>
