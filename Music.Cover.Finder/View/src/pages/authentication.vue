@@ -17,14 +17,11 @@
 
         <v-content>
 
-            <v-container grid-list-xl xs10 offset-xs1>
+            <v-container >
+            <v-flex lg8 offset-lg2>
                 <v-layout row wrap>
-                    <v-flex xs2>
-                        <v-subheader>Discogs Token</v-subheader>
-                    </v-flex>
-
-                    <v-flex xs8>
-                        <v-text-field label="Token" 
+                    <v-flex>
+                        <v-text-field box label="Discogs Token" 
                             v-model="viewModel.Token"
                             :append-icon="hideToken ? 'visibility' : 'visibility_off'"
                             :append-icon-cb="() => (hideToken = !hideToken)"
@@ -41,6 +38,7 @@
                     <text-button :text="$t('Resource.SearchMusicCover')" :command="viewModel.GoToSearch">
                     </text-button>
                  </v-layout>
+                </v-flex>
             </v-container>
         </v-content>
     </main>
