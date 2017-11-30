@@ -4,6 +4,7 @@ using Microsoft.Practices.ServiceLocation;
 using Neutronium.Core.WebBrowserEngine.Window;
 using Music.Cover.Finder.Application.LifeCycleHook;
 using Music.Cover.Finder.Model;
+using Music.Cover.Finder.Model.Discogs;
 using Music.Cover.Finder.Model.Persistency;
 using Music.Cover.Finder.ViewModel.Pages;
 using Neutronium.WPF.Internal;
@@ -35,9 +36,10 @@ namespace Music.Cover.Finder
             var application = new WpfApplication(window);
             kernel.Bind<IApplication>().ToConstant(application);
             kernel.Bind<IDispatcher>().ToConstant(new WPFUIDispatcher(window.Dispatcher));
-            kernel.Bind<IApplicationLifeCycle>().To<ApplicationLifeCycle>();
             kernel.Bind<IApplicationConfiguration>().To<MemoryApplicationConfiguration>().InSingletonScope();
             kernel.Bind<SearchViewModel>().ToSelf().InSingletonScope();
+            kernel.Bind<IApplicationLifeCycle>().To<ApplicationLifeCycle>();
+            kernel.Bind<IDiscogsClientProvider>().To<DiscogsClientProvider>();
         }
     }
 }

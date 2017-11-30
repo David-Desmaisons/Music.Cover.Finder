@@ -23,8 +23,10 @@ import {
     VToolbar,
     VCard,
     VDialog,
+    VProgressCircular,
     VSubheader,
     VTextField,
+    VAvatar,
     transitions
   } from 'vuetify'
 
@@ -33,9 +35,11 @@ function install(Vue) {
         components: {
           VApp,
           VAlert,
+          VAvatar,
           VCheckBox,
           VDivider,
           VNavigationDrawer,
+          VProgressCircular,
           VFooter,
           VList,
           VBtn,

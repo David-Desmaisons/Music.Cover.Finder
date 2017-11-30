@@ -17,16 +17,12 @@
       <router-view :viewModel="viewModel.CurrentViewModel"></router-view>
     </transition>
 
-    <application-footer :year="viewModel.ApplicationInformation.Year">
-    </application-footer>
-
   </v-app>
 </template>
 
 <script>
 
 import sideMenu from './components/sideMenu'
-import applicationFooter from './components/applicationFooter'
 import topMenu from './components/topMenu'
 import modal from './components/modal'
 import applicationNotification from './components/applicationNotification'
@@ -44,7 +40,6 @@ const props={
 export default {
   components:{
       sideMenu,
-      applicationFooter,
       topMenu,
       modal,
       applicationNotification

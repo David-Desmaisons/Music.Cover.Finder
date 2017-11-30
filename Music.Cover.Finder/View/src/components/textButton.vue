@@ -1,5 +1,5 @@
 <template>
-    <v-btn :color="color" :disabled="!canExecute"  @click.stop="execute">
+    <v-btn :color="color" :disabled="!canExecute" :loading="loading"  @click.stop="execute">
         {{text}}
     </v-btn>
 </template>
@@ -15,6 +15,10 @@ const props = {
     color:{
         type: String,
         default: 'primary'
+    },
+    loading:{
+        type: Boolean,
+        default: false
     }
 }
 

@@ -1,5 +1,5 @@
 <template>
-    <v-btn small icon @click.stop="execute">
+    <v-btn small icon :loading="loading" @click.stop="execute">
         <v-icon>{{icon}}</v-icon>
     </v-btn>
 </template>
@@ -11,6 +11,10 @@ const props = {
     icon:{
         type: String,
         required: true
+    },
+    loading:{
+        type: Boolean,
+        default: false
     }
 }
 
