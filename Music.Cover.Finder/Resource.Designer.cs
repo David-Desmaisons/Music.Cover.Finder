@@ -61,7 +61,7 @@ namespace Music.Cover.Finder {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cover Finder Application, Made with Neutronum.
+        ///   Looks up a localized string similar to Cover Finder Application, using Discogs API, made with Neutronium.
         /// </summary>
         internal static string About {
             get {

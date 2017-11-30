@@ -1,7 +1,7 @@
 ﻿{
  "en-US":{
         "Resource":{
-            "About":"Cover Finder Application, Made with Neutronum",
+            "About":"Cover Finder Application, using Discogs API, made with Neutronium",
             "Album":"Album",
             "Artist":"Artist",
             "Button":"button.",

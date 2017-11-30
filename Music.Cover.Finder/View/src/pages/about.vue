@@ -10,7 +10,10 @@
                     </div>
                     </v-card-title>
                     <v-card-actions>
-                        <v-btn flat color="orange" @click.native.prevent="execute(viewModel.GoToProduct)">GitHub</v-btn>
+                        <v-btn flat color="orange" @click.native.prevent="execute(viewModel.GoToProduct)">
+                        GitHub<v-icon right>fa-github</v-icon>
+                        </v-btn>
+                        <v-btn flat color="orange" @click.native.prevent="execute(viewModel.GoToDiscogs)">Discogs</v-btn>
                         <v-btn flat color="orange" @click.native.prevent="execute(viewModel.GoToNeutronium)">Neutronium</v-btn>
                     </v-card-actions>
                 </v-card>
