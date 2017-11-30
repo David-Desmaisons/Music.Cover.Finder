@@ -186,8 +186,14 @@
   <data name="Restart" xml:space="preserve">
     <value>Restart</value>
   </data>
+  <data name="ResultFound" xml:space="preserve">
+    <value>result found</value>
+  </data>
   <data name="Results" xml:space="preserve">
     <value>Results</value>
+  </data>
+  <data name="ResultsFound" xml:space="preserve">
+    <value>results found</value>
   </data>
   <data name="Search" xml:space="preserve">
     <value>Search</value>

@@ -268,11 +268,29 @@ namespace Music.Cover.Finder {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to result found.
+        /// </summary>
+        internal static string ResultFound {
+            get {
+                return ResourceManager.GetString("ResultFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Results.
         /// </summary>
         internal static string Results {
             get {
                 return ResourceManager.GetString("Results", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to results found.
+        /// </summary>
+        internal static string ResultsFound {
+            get {
+                return ResourceManager.GetString("ResultsFound", resourceCulture);
             }
         }
         

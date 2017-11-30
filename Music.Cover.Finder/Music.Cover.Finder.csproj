@@ -272,7 +272,6 @@
     <None Include="View\data\authentication\vm.cjson" />
     <None Include="View\data\search\vm.cjson" />
     <None Include="View\data\vm.cjson" />
-    <None Include="View\src\components\applicationFooter.vue" />
     <None Include="View\src\components\applicationNotification.vue" />
     <None Include="View\src\components\iconButton.vue" />
     <None Include="View\src\components\modal.vue" />

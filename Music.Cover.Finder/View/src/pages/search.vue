@@ -3,22 +3,27 @@
       <v-content>
         <v-container fluid class="main-container">
           <v-flex lg8 offset-lg2>
-            <v-layout row wrap>
-              <v-flex lg6>
-                  <v-text-field box :label="$t('Resource.Album')" v-model="viewModel.Album" required></v-text-field>
-                </v-flex>
+
+            <v-card>
+              <v-layout row wrap>
                 <v-flex lg6>
-                  <v-text-field box :label="$t('Resource.Artist')" v-model="viewModel.Artist" required></v-text-field>
-                </v-flex>
-            </v-layout>
-             <v-layout row wrap>
-                <text-button :text="$t('Resource.Search')" :command="viewModel.Search" :loading="viewModel.Running" :color="blue"></text-button>
-             </v-layout>
+                    <v-text-field box :label="$t('Resource.Album')" v-model="viewModel.Album" required></v-text-field>
+                  </v-flex>
+                  <v-flex lg6>
+                    <v-text-field box :label="$t('Resource.Artist')" v-model="viewModel.Artist" required></v-text-field>
+                  </v-flex>
+              </v-layout>
+              <v-layout row wrap>
+                  <v-flex>
+                    <text-button :text="$t('Resource.Search')" :command="viewModel.Search" :loading="viewModel.Running" :color="blue"></text-button>
+                  </v-flex>
+              </v-layout>
+             </v-card>
 
           
             <v-card wrap v-if="viewModel.Results.length>0">
               <v-toolbar color="blue">
-                <v-toolbar-title>{{$t('Resource.Results')}}</v-toolbar-title>
+                <v-toolbar-title>{{viewModel.Results.length}} {{$t('Resource.ResultsFound')}}</v-toolbar-title>
               </v-toolbar>
               <v-list>
                 <v-list-tile avatar v-for="item in viewModel.Results" :key="item.id">
@@ -59,6 +64,12 @@ export default {
       const command = this.viewModel.AddItem;
       if (command)
         command.Execute()
+    }
+  },
+  computed:{
+    resultsFound(){
+      var count = this.viewModel.Results.length;
+      return (count <=1) ? `${count} ${this.$t('Resource.ResultFound')}` : `${count} ${this.$t('Resource.ResultsFound')}`;
     }
   },
   props
