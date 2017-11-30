@@ -232,6 +232,15 @@ namespace Music.Cover.Finder {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No result found.
+        /// </summary>
+        internal static string NoResultFound {
+            get {
+                return ResourceManager.GetString("NoResultFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Ok.
         /// </summary>
         internal static string Ok {

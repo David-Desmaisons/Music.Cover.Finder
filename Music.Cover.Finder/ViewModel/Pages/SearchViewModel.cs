@@ -22,6 +22,13 @@ namespace Music.Cover.Finder.ViewModel.Pages
             }
         }
 
+        private bool _NothingFound;
+        public bool NothingFound
+        {
+            get { return _NothingFound; }
+            set { Set(ref _NothingFound, value); }
+        }
+
         private string _Album;
         public string Album
         {
@@ -77,6 +84,7 @@ namespace Music.Cover.Finder.ViewModel.Pages
         private void DoSearch()
         {
             Running = true;
+            NothingFound = false;
             Results.Clear();
             _CancellationTokenSource = new CancellationTokenSource();
             var client = _DiscogsClientProvider.GetDiscogsClient();
@@ -96,6 +104,7 @@ namespace Music.Cover.Finder.ViewModel.Pages
         public void OnEnd()
         {
             Running = false;
+            NothingFound = Results.Count == 0;
         }
     }
 }

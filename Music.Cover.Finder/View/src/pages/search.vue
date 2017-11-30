@@ -36,6 +36,14 @@
                 </v-list-tile>
               </v-list>
             </v-card>
+
+            <v-card wrap v-if="viewModel.NothingFound">
+              <v-toolbar color="red">
+                <v-toolbar-title>{{$t('Resource.NoResultFound')}}</v-toolbar-title>
+              </v-toolbar>
+	          </v-card>
+
+            
             <v-layout row wrap>
           </v-layout>
 

@@ -20,6 +20,7 @@
             "Menu_authentication":"Authentication",
             "Menu_search":"Search",
             "NeedToken":"Please provide a valid Discogs Token",
+            "NoResultFound":"No result found",
             "Ok":"Ok",
             "OperationNotAvailable":"Operation not available",
             "ProjectDescription":"Cover Finder Application",
