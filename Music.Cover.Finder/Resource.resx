@@ -138,9 +138,6 @@
   <data name="ConfirmationNeeded" xml:space="preserve">
     <value>Confirmation needed</value>
   </data>
-  <data name="DiscogsExplanation" xml:space="preserve">
-    <value>Go to https://www.discogs.com/settings/developers. Create an account and generate a token using 'Generate new token' button.</value>
-  </data>
   <data name="DoYouWantToCloseApplication" xml:space="preserve">
     <value>Do you want to close application?</value>
   </data>

@@ -124,15 +124,6 @@ namespace Music.Cover.Finder {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Go to https://www.discogs.com/settings/developers. Create an account and generate a token using &apos;Generate new token&apos; button..
-        /// </summary>
-        internal static string DiscogsExplanation {
-            get {
-                return ResourceManager.GetString("DiscogsExplanation", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Do you want to close application?.
         /// </summary>
         internal static string DoYouWantToCloseApplication {

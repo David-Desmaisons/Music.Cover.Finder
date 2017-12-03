@@ -22,6 +22,7 @@
                 <v-layout row wrap>
                     <v-flex>
                         <v-text-field box label="Discogs Token" 
+                            :autofocus="autoFocus"
                             v-model="viewModel.Token"
                             :append-icon="hideToken ? 'visibility' : 'visibility_off'"
                             :append-icon-cb="() => (hideToken = !hideToken)"
@@ -47,7 +48,6 @@
 <script>
 import textButton from '../components/textButton'
 
-
 const props={
   viewModel: Object,
 }
@@ -62,6 +62,11 @@ export default {
     methods:{
         execute(command){
             !!command && command.Execute()
+        }
+    },
+    computed:{
+        autoFocus(){
+            return (!this.viewModel.Token)
         }
     },
     components:{

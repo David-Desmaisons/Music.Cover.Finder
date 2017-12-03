@@ -3660,6 +3660,11 @@
       "from": "vue@>=2.5.2 <3.0.0",
       "resolved": "https://registry.npmjs.org/vue/-/vue-2.5.2.tgz"
     },
+    "vue-focus": {
+      "version": "2.1.0",
+      "from": "vue-focus@latest",
+      "resolved": "https://registry.npmjs.org/vue-focus/-/vue-focus-2.1.0.tgz"
+    },
     "vue-hot-reload-api": {
       "version": "2.2.0",
       "from": "vue-hot-reload-api@>=2.2.0 <3.0.0",

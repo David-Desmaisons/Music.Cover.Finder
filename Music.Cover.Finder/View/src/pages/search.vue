@@ -7,7 +7,7 @@
             <v-card>
               <v-layout row wrap>
                 <v-flex lg6>
-                    <v-text-field box :label="$t('Resource.Album')" v-model="viewModel.Album" required></v-text-field>
+                    <v-text-field box :label="$t('Resource.Album')" v-model="viewModel.Album" required :autofocus="autoFocus"></v-text-field>
                   </v-flex>
                   <v-flex lg6>
                     <v-text-field box :label="$t('Resource.Artist')" v-model="viewModel.Artist" required></v-text-field>
@@ -15,7 +15,7 @@
               </v-layout>
               <v-layout row wrap>
                   <v-flex>
-                    <text-button :text="$t('Resource.Search')" :command="viewModel.Search" :loading="viewModel.Running" :color="blue"></text-button>
+                    <text-button :text="$t('Resource.Search')" :command="viewModel.Search" :loading="viewModel.Running" color="blue"></text-button>
                   </v-flex>
               </v-layout>
              </v-card>
@@ -78,6 +78,9 @@ export default {
     resultsFound(){
       var count = this.viewModel.Results.length;
       return (count <=1) ? `${count} ${this.$t('Resource.ResultFound')}` : `${count} ${this.$t('Resource.ResultsFound')}`;
+    },
+    autoFocus(){
+      return (this.viewModel.Album == null) && (this.viewModel.Artist == null)
     }
   },
   props
