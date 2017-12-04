@@ -27,6 +27,7 @@
                             :append-icon="hideToken ? 'visibility' : 'visibility_off'"
                             :append-icon-cb="() => (hideToken = !hideToken)"
                             :type="hideToken ? 'password' : 'text'"
+                            @keyup.enter.native="submit"
                             required>
                         </v-text-field>
                     </v-flex>
@@ -62,6 +63,9 @@ export default {
     methods:{
         execute(command){
             !!command && command.Execute()
+        },
+        submit() {
+            this.execute(this.viewModel.GoToSearch)
         }
     },
     computed:{
