@@ -7,10 +7,10 @@
             <v-card>
               <v-layout row wrap>
                 <v-flex lg6>
-                    <v-text-field box :label="$t('Resource.Album')" v-model="viewModel.Album" required :autofocus="autoFocus"></v-text-field>
+                    <v-text-field box :label="$t('Resource.Album')" v-model="viewModel.Album" @keyup.enter.native="submit" required :autofocus="autoFocus"></v-text-field>
                   </v-flex>
                   <v-flex lg6>
-                    <v-text-field box :label="$t('Resource.Artist')" v-model="viewModel.Artist" required></v-text-field>
+                    <v-text-field box :label="$t('Resource.Artist')" v-model="viewModel.Artist" @keyup.enter.native="submit" required></v-text-field>
                   </v-flex>
               </v-layout>
               <v-layout row wrap>
@@ -68,8 +68,8 @@ export default {
     iconButton
   },
   methods:{
-    enter(){
-      const command = this.viewModel.AddItem;
+    submit() {
+      const command = this.viewModel.Search;
       if (command)
         command.Execute()
     }
