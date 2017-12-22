@@ -1,5 +1,5 @@
 const routes = {
-    "search" : "vm_mishka"
+    "search" : "vm_hendrix"
 };
 
 export {routes}
