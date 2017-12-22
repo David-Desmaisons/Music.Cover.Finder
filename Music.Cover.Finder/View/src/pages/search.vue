@@ -23,7 +23,7 @@
           
             <v-card wrap v-if="viewModel.Results.length>0">
               <v-toolbar color="blue">
-                <v-toolbar-title>{{viewModel.Results.length}} {{$t('Resource.ResultsFound')}}</v-toolbar-title>
+                <v-toolbar-title>{{resultsFound}}</v-toolbar-title>
               </v-toolbar>
               <v-list>
                 <v-list-tile avatar v-for="item in viewModel.Results" :key="item.id">
@@ -43,7 +43,6 @@
               </v-toolbar>
 	          </v-card>
 
-            
             <v-layout row wrap>
           </v-layout>
 
@@ -55,36 +54,37 @@
 </template>
 
 <script>
-import textButton from '../components/textButton'
-import iconButton from '../components/IconButton'
+import textButton from "../components/textButton";
+import iconButton from "../components/IconButton";
 
-const props={
-  viewModel: Object,
-}
+const props = {
+  viewModel: Object
+};
 
 export default {
-  components:{
+  components: {
     textButton,
     iconButton
   },
-  methods:{
+  methods: {
     submit() {
       const command = this.viewModel.Search;
-      if (command)
-        command.Execute()
+      if (command) command.Execute();
     }
   },
-  computed:{
-    resultsFound(){
+  computed: {
+    resultsFound() {
       var count = this.viewModel.Results.length;
-      return (count <=1) ? `${count} ${this.$t('Resource.ResultFound')}` : `${count} ${this.$t('Resource.ResultsFound')}`;
+      return count <= 1
+        ? `${count} ${this.$t("Resource.ResultFound")}`
+        : `${count} ${this.$t("Resource.ResultsFound")}`;
     },
-    autoFocus(){
-      return (this.viewModel.Album == null) && (this.viewModel.Artist == null)
+    autoFocus() {
+      return this.viewModel.Album == null && this.viewModel.Artist == null;
     }
   },
   props
-}
+};
 </script>
 
 <style>
