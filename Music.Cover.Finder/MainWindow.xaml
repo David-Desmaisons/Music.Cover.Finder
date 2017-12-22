@@ -8,8 +8,9 @@
         mc:Ignorable="d"
         Icon="Content\logo.png"
         MinWidth="1400"
+        Margin="8"
         Height="940"
-        BorderThickness="0"
+        BorderThickness="2"
         Title="MainWindow">
     <i:Interaction.Behaviors>
         <wpf:Chromeless />
