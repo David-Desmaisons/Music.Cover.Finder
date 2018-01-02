@@ -18,7 +18,12 @@ namespace Music.Cover.Finder
 
         public MainWindow()
         {
+            Initialized += MainWindow_Initialized;
             InitializeComponent();
+        }
+
+        private void MainWindow_Initialized(object sender, EventArgs e)
+        {
             DataContext = BuildApplicationViewModel();
         }
 

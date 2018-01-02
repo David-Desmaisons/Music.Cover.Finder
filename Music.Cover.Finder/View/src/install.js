@@ -59,7 +59,7 @@ function install(Vue) {
     Vue.use(Notifications)
 }
 
-function vueInstanceOption() {
+function vueInstanceOption(vm) {
     const i18n = new VueI18n({
         locale: 'en-US', // set locale
         messages // set locale messages

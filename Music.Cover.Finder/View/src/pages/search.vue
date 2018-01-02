@@ -19,7 +19,6 @@
                   </v-flex>
               </v-layout>
              </v-card>
-
           
             <v-card wrap v-if="viewModel.Results.length>0">
               <v-toolbar color="blue">
