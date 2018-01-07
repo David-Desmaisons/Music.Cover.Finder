@@ -19,4 +19,3 @@ function buildVueOption(vm) {
 
 install(Vue)
 vueHelper.setOption(buildVueOption)
-Vue.component('app', App)
