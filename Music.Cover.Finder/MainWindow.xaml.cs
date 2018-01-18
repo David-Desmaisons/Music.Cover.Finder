@@ -4,7 +4,6 @@ using Music.Cover.Finder.Application.LifeCycleHook;
 using Music.Cover.Finder.Application.Navigation;
 using Music.Cover.Finder.Application.WindowServices;
 using Music.Cover.Finder.ViewModel;
-using Music.Cover.Finder.ViewModel.Pages;
 using Neutronium.WPF.ViewModel;
 
 namespace Music.Cover.Finder
