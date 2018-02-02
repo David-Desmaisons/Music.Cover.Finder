@@ -2,7 +2,7 @@
     <main>
       <v-content>
         <v-container fluid class="main-container">
-          <v-flex lg8 offset-lg2>
+          <v-flex lg10 offset-lg1>
 
             <v-card>
               <v-layout row wrap>
@@ -24,16 +24,10 @@
               <v-toolbar color="blue">
                 <v-toolbar-title>{{resultsFound}}</v-toolbar-title>
               </v-toolbar>
-              <v-list>
-                <v-list-tile avatar v-for="item in viewModel.Results" :key="item.id">
-                  <v-list-tile-avatar :tile="true">
-                    <img :src="item.thumb"/>
-                  </v-list-tile-avatar>
-                  <v-list-tile-content>
-                    <v-list-tile-title v-text="item.title"></v-list-tile-title>
-                  </v-list-tile-content>
-                </v-list-tile>
-              </v-list>
+              <v-layout row wrap>
+                  <disc v-for="item in viewModel.Results" :key="item.id" :disc="item">
+                  </disc>
+              </v-layout>
             </v-card>
 
             <v-card wrap v-if="viewModel.NothingFound">
@@ -55,6 +49,8 @@
 <script>
 import textButton from "../components/textButton";
 import iconButton from "../components/IconButton";
+import disc from "../components/disc";
+
 
 const props = {
   viewModel: Object
@@ -63,7 +59,8 @@ const props = {
 export default {
   components: {
     textButton,
-    iconButton
+    iconButton,
+    disc
   },
   methods: {
     submit() {
