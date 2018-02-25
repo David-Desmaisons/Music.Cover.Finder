@@ -25,7 +25,7 @@
                 <v-toolbar-title>{{resultsFound}}</v-toolbar-title>
               </v-toolbar>
               <v-layout row wrap>
-                  <disc v-for="item in viewModel.Results" :key="item.id" :disc="item">
+                  <disc v-for="(item,index) in viewModel.Results" :key="index" :disc="item">
                   </disc>
               </v-layout>
             </v-card>
