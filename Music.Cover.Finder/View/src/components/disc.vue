@@ -1,5 +1,5 @@
 <template>
-<card :height="150" :width="150" class="disc-item" @mouseover.native="flipped=true" @mouseleave.native="flipped=false" :flipped="flipped">
+<card height="150px" width="150px" class="disc-item" @mouseover.native="flipped=true" @mouseleave.native="flipped=false" :flipped="flipped">
 	<div slot="front" class="front" :style="{background}">
 	</div>
 	

@@ -1,5 +1,5 @@
 <template>
-<section class="card-container" :style="{width: width+'px', height: height+'px', perspective: perspective+'px'}">
+<section class="card-container" :style="{width, height, perspective: perspective+'px'}">
   <div class="card" :class="{flipped}" :style="{transition: 'transform '+transition+'s'}">
     <figure class="front">
         <slot name="front">
@@ -20,13 +20,13 @@ const props = {
   },
   width: {
     required: false,
-    type: Number,
-    default: 150
+    type: String,
+    default: "150px"
   },
   height: {
     required: false,
-    type: Number,
-    default: 150
+    type: String,
+    default: "150px"
   },
   perspective: {
     required: false,

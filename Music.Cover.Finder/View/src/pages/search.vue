@@ -24,10 +24,12 @@
               <v-toolbar color="blue">
                 <v-toolbar-title>{{resultsFound}}</v-toolbar-title>
               </v-toolbar>
-              <v-layout row wrap>
-                  <disc v-for="(item,index) in viewModel.Results" :key="index" :disc="item">
-                  </disc>
-              </v-layout>
+                <div v-resize:debounce.25="onResize">
+                  <isotope ref="isotope" :options='getIsotopeOptions()' :list="viewModel.Results">
+                    <disc v-for="(item,index) in viewModel.Results" :key="index" :disc="item">
+                    </disc>
+                  </isotope>
+                </div>
             </v-card>
 
             <v-card wrap v-if="viewModel.NothingFound">
@@ -50,22 +52,39 @@
 import textButton from "../components/textButton";
 import iconButton from "../components/IconButton";
 import disc from "../components/disc";
-
+import isotope from "vueisotope";
+import resize from "vue-resize-directive";
 
 const props = {
   viewModel: Object
 };
 
 export default {
+  directives: {
+    resize
+  },
   components: {
     textButton,
     iconButton,
-    disc
+    disc,
+    isotope
   },
   methods: {
     submit() {
       const command = this.viewModel.Search;
       if (command) command.Execute();
+    },
+    getIsotopeOptions() {
+      return {
+        masonry: {
+          columnWidth: 170,
+          fitWidth: true
+        }
+      };
+    },
+    onResize() {
+      const isotope = this.$refs["isotope"];
+      isotope && isotope.layout();
     }
   },
   computed: {
@@ -87,7 +106,6 @@ export default {
 main {
   height: 100%;
 }
-
 .main-container {
   height: 100%;
   overflow-y: auto;
