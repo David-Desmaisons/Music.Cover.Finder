@@ -118,6 +118,17 @@ main {
 .isotope-root {
   width: 100%;
 }
+div::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #000000;
+}
+div::-webkit-scrollbar {
+  width: 8px;
+  background-color: #000000;
+}
+div::-webkit-scrollbar-thumb {
+  background-color: #f5f5f5;
+}
 </style>
 
 
