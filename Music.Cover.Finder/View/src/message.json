@@ -8,7 +8,6 @@
             "Cancel":"Cancel",
             "Completed":"Completed",
             "ConfirmationNeeded":"Confirmation needed",
-            "DiscogsExplanation":"Go to https://www.discogs.com/settings/developers. Create an account and generate a token using 'Generate new token' button.",
             "DoYouWantToCloseApplication":"Do you want to close application?",
             "DoYouWantToRestartApplication":"Do you want to restart application?",
             "FirstTimeTokenMessage":"Please provide a Discogs Token to start using Music Cover Finder",
@@ -31,7 +30,7 @@
             "Search":"Search",
             "SearchMusicCover":"Go To Music Cover Search",
             "ThenGoTo":"Then go to ",
-            "ToCreateUse":"to create a user.",
+            "ToCreateUser":" to create a user.",
             "VisitDiscogs":"Visit Discogs",
             "WelcomeMessage":"Welcome To Music Cover Finder"
         }

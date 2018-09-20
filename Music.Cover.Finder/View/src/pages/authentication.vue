@@ -4,7 +4,7 @@
             <v-card>
                 <v-card-title class="headline">{{$t('Resource.HowToDiscogsToken')}}</v-card-title>
                 <v-card-text>
-                <p>{{$t('Resource.GoTo')}} <a @click.stop.prevent="execute(viewModel.GoToDiscogs)" href="#">https://www.discogs.com</a>{{$t('Resource.ToCreateUse')}}</p>
+                <p>{{$t('Resource.GoTo')}} <a @click.stop.prevent="execute(viewModel.GoToDiscogs)" href="#">https://www.discogs.com</a>{{$t('Resource.ToCreateUser')}}</p>
                 <p>{{$t('Resource.ThenGoTo')}}<a @click.stop.prevent="execute(viewModel.GoToToken)" href="#">https://www.discogs.com/settings/developers</a> {{$t('Resource.GenerateTokenUsing')}} <span class="blue--text">Generate new token</span> {{$t('Resource.Button')}}</p>
                 </v-card-text>
                 <v-card-actions>
