@@ -3,8 +3,7 @@
 C# desktop demo application that uses [Discogs API](https://www.discogs.com/developers/) to display album art.
 
 
-Made with [Discogs.Client](https://github.com/David-Desmaisons/DiscogsClient) and [Neutronium](https://github.com/NeutroniumCore/Neutronium)
-
+Made with [Discogs.Client](https://github.com/David-Desmaisons/DiscogsClient) [Neutronium](https://github.com/NeutroniumCore/Neutronium) and [vuetify](https://vuetifyjs.com/)
 
 
 ## Screenshots
