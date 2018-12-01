@@ -9,10 +9,10 @@ Made with [Discogs.Client](https://github.com/David-Desmaisons/DiscogsClient) an
 
 ## Screenshots
 
-![screen 3](.\docs\screen3.png)
+![screen 3](./docs/screen3.png)
 
-![screen 2](.\docs\screen2.png)
+![screen 2](./docs/screen2.png)
 
-![screen 1](.\docs\screen1.png)
+![screen 1](./docs/screen1.png)
 
-![screen 0](.\docs\screen0.png)
+![screen 0](./docs/screen0.png)
